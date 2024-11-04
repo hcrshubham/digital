@@ -1,9 +1,17 @@
 "use client";
 import { useTheme } from "next-themes";
 import resumeData from "@/data/resumeData";
+import { useEffect, useState } from "react";
 
 const ResumeCard = () => {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true); // Ensures client-side rendering is consistent
+  }, []);
+
+  if (!mounted) return null;
 
   return (
     <>
@@ -15,15 +23,12 @@ const ResumeCard = () => {
               {item.title}
             </h4>
           </div>
-          {/* end flex */}
 
           {item.items.map((singleItem) => (
             <div
-              className="py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg  dark:border-[#212425] dark:border-2"
+              className="py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg dark:border-[#212425] dark:border-2"
               style={{
-                background: `${
-                  theme === "dark" ? "transparent" : singleItem?.bg
-                }`,
+                background: resolvedTheme === "dark" ? "transparent" : singleItem?.bg,
               }}
               key={singleItem.id}
             >

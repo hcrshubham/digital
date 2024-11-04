@@ -2,9 +2,17 @@
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import serviceData from "@/data/serviceData";
+import { useEffect, useState } from "react";
 
 const Service = () => {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true); // Ensures client-side rendering is consistent
+  }, []);
+
+  if (!mounted) return null; // Wait for theme initialization
 
   return (
     <>
@@ -13,11 +21,11 @@ const Service = () => {
           className="about-box dark:bg-transparent"
           key={item.id}
           style={{
-            background: `${theme === "dark" ? "transparent" : item?.bg}`,
+            background: resolvedTheme === "dark" ? "transparent" : item?.bg,
           }}
         >
           <Image
-            className="w-10 h-10 object-contain  block"
+            className="w-10 h-10 object-contain block"
             src={item.icon}
             width={40}
             height={40}
@@ -28,7 +36,7 @@ const Service = () => {
             <h3 className="dark:text-white text-xl font-semibold">
               {item?.title}
             </h3>
-            <p className=" leading-8 text-gray-lite dark:text-[#A6A6A6]">
+            <p className="leading-8 text-gray-lite dark:text-[#A6A6A6]">
               {item?.des}
             </p>
           </div>
