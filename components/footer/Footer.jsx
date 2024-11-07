@@ -6,11 +6,11 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} All Rights Reserved by{" "}
           <a
             className="hover:text-[#FA5252] duration-300 transition"
-            href="https://themeforest.net/user/ib-themes"
+            href="/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            ib-themes
+            Shubham Kumar Sharma
           </a>
           .
         </p>

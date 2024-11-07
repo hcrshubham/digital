@@ -7,11 +7,11 @@ const Footer = () => {
           © 2022 All Rights Reserved by{" "}
           <a
             className="hover:text-[#FA5252] duration-300 transition"
-            href="https://themeforest.net/user/ib-themes"
+            href="/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            ib-themes
+            Shubham Kumar Sharma
           </a>
           .
         </p>
