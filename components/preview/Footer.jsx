@@ -4,7 +4,7 @@ const Footer = () => {
       {/* Start Footer */}
       <footer className="bg-slate-800">
         <p className="text-center py-5 text-white ">
-          © 2022 All Rights Reserved by{" "}
+          © 2024 All Rights Reserved by{" "}
           <a
             className="hover:text-[#FA5252] duration-300 transition"
             href="/"

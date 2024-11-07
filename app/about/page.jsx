@@ -30,25 +30,25 @@ const index = () => {
           {/* End top about info */}
 
           {/* Start about service info */}
-          <div className="pb-12 ">
+          {/* <div className="pb-12 ">
             <h3 className="text-[35px] dark:text-white font-medium pb-5">
               What I do!
             </h3>
             <div className="grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 ">
-              {/* Experience information  */}
+             
 
               <Service />
             </div>
-          </div>
+          </div> */}
           {/* End about service info */}
 
           {/* Start Client Slider */}
-          <div className="bg-[#F8FBFB] dark:bg-[#0D0D0D] max-w-full h-auto   py-10 rounded-xl">
+          {/* <div className="bg-[#F8FBFB] dark:bg-[#0D0D0D] max-w-full h-auto   py-10 rounded-xl">
             <h3 className="text-center dark:text-white text-6xl mb-3 font-semibold ">
               Clients
             </h3>
             <Brand />
-          </div>
+          </div> */}
           {/* End Client Slider */}
 
           {/* Start Common Footer  */}
